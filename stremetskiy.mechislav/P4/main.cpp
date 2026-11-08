@@ -9,7 +9,7 @@ namespace stremetskiy
 {
 	constexpr int SUCCESS_CODE = 0;
 	constexpr int FAIL_CODE = 1;
-	constexpr std::size_t MAX_SIZE_T = std::numeric_limits<std::size_t>::max();
+	constexpr std::size_t MAX_OF_SIZE_T = std::numeric_limits<std::size_t>::max();
 
 	char* readLine(std::istream&);
 	char* deleteLatSymb(const char*, char*) noexcept;
@@ -87,7 +87,7 @@ namespace stremetskiy
 			{
 				if (size == capacity - 1)
 				{
-					if (capacity > (stremetskiy::MAX_SIZE_T / 2))
+					if (capacity > (stremetskiy::MAX_OF_SIZE_T / 2))
 					{
 						delete[] data;
 						throw;
